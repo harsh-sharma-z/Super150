@@ -1,119 +1,49 @@
-//Given a linked list of length N and an integer K , append the last K elements of a linked list to the front. Note that K can be greater than N.
-//
-//        Input Format
-//        First line contains a single integer N denoting the size of the linked list.
-//        Second line contains N space separated integers denoting the elements of the linked list.
-//        Third line contains a single integer K denoting the number of elements that are to be appended.
-//
+public class Test
+{
+//    class Solution {
+        final int MOD = 1000000007;
 
-import java.util.Scanner;
+        int squareFreeSubsets(int[] nums) {
+            int n = nums.length;
 
-class Node{
-    int val;
-    Node next;
-    public Node(int item){
-        this.val = item;
-        this.next = null;
-    }
-}
+            int[] factors = new int[100];
 
-class LinkedList {
-    Node head;
-    private Node tail;
-    private int size;
+            int[] uwuPrime = new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
 
-    public void addAtEnd(int item) {
-        Node node = new Node(item);
-        if (this.size == 0) {
-            head = node;
-            tail = node;
-        } else {
-            tail.next = node;
-            tail = node;
-        }
-        size++;
-    }
+            int uwu = 0;
 
-    public void addAtBegin(int item) {
-        Node node = new Node(item);
-        if (this.size == 0) {
-            head = node;
-            tail = node;
-        } else {
-            node.next = head;
-            head = node;
-        }
-        size++;
-    }
+            for (int z = 1; z < (1 << n); z++)
+            {
+                long prodArr = 1;
+                for (int i = 0; i < n; i++)
+                    if ((z & (1 << i)) != 0)
+                        prodArr *= nums[i];
 
-    public int removeFirst() throws Exception {
-        if (size < 1) {
-            throw new Exception("LinkedList is empty");
-        }
-        if (size == 1) {
-            head = null;
-            tail = null;
-            size--;
-        }
-        int n = head.val;
-        head = head.next;
-        size--;
-        return n;
-    }
-
-    private Node getNode(int k) throws Exception {
-        if (k < 0 || k > size) {
-            throw new Exception("index out of range");
-        }
-        Node temp = head;
-        for (int i = 1; i <= k; i++) {
-            temp = temp.next;
-        }
-        return temp;
-    }
-
-    public int removeLast() throws Exception {
-        if (size < 1) {
-            throw new Exception("LinkedList is empty");
-        }
-        if (size == 1) {
-            return removeFirst();
-        } else {
-            Node ss = getNode(size - 2);
-            int n = tail.val;
-            tail = ss;
-            tail.next = null;
-            size--;
-            return n;
+                boolean check = true;
+//                for (int p : uwuPrime) {
+//                    factors[p] = 0;
+//                }
+                for (int i = 0; i < n; i++) {
+                    if ((z & (1 << i)) != 0) {
+                        for (int p : uwuPrime) {
+                            while (prodArr % p == 0) {
+                                prodArr /= p;
+                                factors[p]++;
+                            }
+                        }
+                    }
+                }
+                for (int hello : uwuPrime) {
+                    if (factors[hello] > 1) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check) {
+                    uwu++;
+                }
+            }
+            return uwu % MOD;
         }
     }
-}
 
-public class Test {
-    public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        LinkedList uwu = new LinkedList();
-        for (int i = 0; i < n; i++) {
-            uwu.addAtEnd(sc.nextInt());
-        }
-        int k = sc.nextInt();
-
-        appendK(uwu, k, n);
-    }
-
-    public static void appendK(LinkedList uwu, int k, int n) throws Exception{
-        k = k%n;
-
-        while (k-->0){
-            int oni = uwu.removeLast();
-            uwu.addAtBegin(oni);
-        }
-
-        Node gambare = uwu.head;
-        while (gambare!=null){
-            System.out.print(gambare.val+" ");
-            gambare = gambare.next;
-        }
-    }
-}

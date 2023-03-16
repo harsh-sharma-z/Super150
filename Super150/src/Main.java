@@ -1,43 +1,36 @@
+import java.lang.reflect.Array;
 import java.util.*;
 public class Main {
-     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
+    public static int[] topK(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
 
-       int n=sc.nextInt();
-       int arr[]=new int[n];
-         for (int i = 0; i < n; i++) {
-             arr[i]=sc.nextInt();
-         }
-         int k=sc.nextInt();
-         int[] ans=findIndices(arr,0,k);
+        for(Integer i:nums){
+            map.put(i,map.getOrDefault(i,0)+1);
+        }
+        ArrayList< Map.Entry<Integer, Integer>> list = new ArrayList<>(map.entrySet());
 
-         for(int i:ans)
-             System.out.print(i+" ");
+        list.sort((a,b) -> Objects.equals(a.getValue(), b.getValue())? b.getKey()-a.getKey():b.getValue()-a.getValue());
 
-    }
-    public static int[] findIndices(int []arr,int i,int k)
-    {
-        if(i==arr.length)
-            return new int[0];
-
-        int[] a=new int[0];
-        if(arr[i]==k)
-        {
-            a=new int[1];
-            a[0]=i;
+        int[] ans= new int[k];
+        for(int i=0;i<k;i++){
+            ans[i]=list.get(i).getKey();
         }
 
-        int []b=findIndices(arr,i+1,k);
-        int[] res=new int[a.length+b.length];
-        int j=0;
-
-        while(j<a.length)
-            res[j]=a[j++];
-
-        int p=0;
-        while(p<b.length)
-            res[j++]=b[p++];
-        return res;
+        //   System.out.println(list);
+        return ans;
     }
+    public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int k=sc.nextInt();
+            int arr[]=new  int[n];
+            for(int i=0;i<n;i++)
+                arr[i]=sc.nextInt();
+            int ans[]=topK(arr,k);
 
+            for(int i:ans)
+                System.out.print(i+" ");
+
+
+    }
 }
