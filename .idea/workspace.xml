@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cbc2382-9290-48cb-a672-b791cb35a1cb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Harsh" beforeDir="false" afterPath="$PROJECT_DIR$/Harsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Harsh/src/DSA/College/Trees/BinarySearchTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/Bellman.java" beforeDir="false" afterPath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/Bellman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/DijkstraShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/DijkstraShortestPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/KruskalMST.java" beforeDir="false" afterPath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/KruskalMST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/MSTPrim.java" beforeDir="false" afterPath="$PROJECT_DIR$/Harsh/src/DSA/personel/Algos/MSTPrim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Harsh/src/DSA/personel/Trees/BinaryTree/BInarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Harsh/src/DSA/personel/Trees/BinaryTree/BInarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPs Practical/OOPs Practical.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/Practical.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/out/production/Practical/Practical/PrimsAlgo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/out/production/Practical/Practical/SelectionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/src/Practical/PrimsAlgo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practical/src/Practical/SelectionSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Super150/out/production/Super150/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/Super150/out/production/Super150/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Super150/src/OOPs/Inheritance/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/Super150/src/OOPs/Inheritance/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Super150/src/OOPs/Inheritance/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Super150/src/OOPs/Inheritance/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Super150/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Super150/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/module2.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2Icvwv4dBSelnI3afUXLGTAes8u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/harsh/IdeaProjects/Super150",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cbc2382-9290-48cb-a672-b791cb35a1cb" name="Changes" comment="" />
+      <created>1670493929804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670493929804</updated>
+      <workItem from="1670493930525" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
