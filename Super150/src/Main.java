@@ -1,36 +1,48 @@
-import java.lang.reflect.Array;
 import java.util.*;
-public class Main {
-    public static int[] topK(int[] nums, int k) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+import java.io.*;
 
-        for(Integer i:nums){
-            map.put(i,map.getOrDefault(i,0)+1);
+class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner sc=new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-->0) {
+
+            int ULx = sc.nextInt();
+            int ULy = sc.nextInt();
+            int LRx = sc.nextInt();
+            int LRy = sc.nextInt();
+
+
+            int Dx = sc.nextInt();
+            int Dy = sc.nextInt();
+
+            int N = sc.nextInt();
+            int[][] trees = new int[N][2];
+            double[] radius = new double[N];
+            for (int i = 0; i < N; i++) {
+                trees[i][0] = sc.nextInt();
+                trees[i][1] = sc.nextInt();
+                radius[i] = sc.nextDouble();
+            }
+
+            int count = 0;
+            for (int R = 1; R <= Math.max(Dx - ULx, LRx - Dx); R++) {
+                boolean valid = true;
+                for (int i = 0; i < N; i++) {
+                    int x = trees[i][0];
+                    int y = trees[i][1];
+                    double d = Math.sqrt((x - Dx) * (x - Dx) + (y - Dy) * (y - Dy));
+                    if (d - radius[i] < R - 1e-9) {
+                        valid = false;
+                        break;
+                    }
+                }
+                if (valid) {
+                    count++;
+                }
+            }
+
+            System.out.println("Case " + t + ": " + count);
         }
-        ArrayList< Map.Entry<Integer, Integer>> list = new ArrayList<>(map.entrySet());
-
-        list.sort((a,b) -> Objects.equals(a.getValue(), b.getValue())? b.getKey()-a.getKey():b.getValue()-a.getValue());
-
-        int[] ans= new int[k];
-        for(int i=0;i<k;i++){
-            ans[i]=list.get(i).getKey();
-        }
-
-        //   System.out.println(list);
-        return ans;
-    }
-    public static void main(String[] args) {
-            Scanner sc=new Scanner(System.in);
-            int n=sc.nextInt();
-            int k=sc.nextInt();
-            int arr[]=new  int[n];
-            for(int i=0;i<n;i++)
-                arr[i]=sc.nextInt();
-            int ans[]=topK(arr,k);
-
-            for(int i:ans)
-                System.out.print(i+" ");
-
-
     }
 }
