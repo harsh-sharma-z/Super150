@@ -17,5 +17,7 @@ public class Topological_Sort_Client {
         System.out.println(Arrays.toString(ts.indegree())); //[0, 0, 2, 2, 1, 1, 0, 2]
         //ts.addedge(3, 1,0);
         ts.TopoSort();  //1 6 4 3 5 2 7
+
+        System.out.println("\nIs there a cycle?:"+ts.isCycle());
     }
 }

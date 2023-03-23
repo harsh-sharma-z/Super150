@@ -43,7 +43,37 @@ public class Topological_Sort {
                 in[nbrs]--;
                 if(in[nbrs]==0)
                     q.add(nbrs);
+
             }
         }
+    }
+
+    public boolean isCycle()
+    {
+        Queue<Integer> qq=new LinkedList<>();
+        int[] ind=indegree();
+        for (int i = 1; i < ind.length; i++) {
+            if (ind[i] == 0) {
+                qq.add(i);
+            }
+
+        }
+
+        int c=0;
+
+        while(!qq.isEmpty())
+        {
+            int key=qq.poll();
+            c++;
+            for(int nbrs:map.get(key).keySet())
+            {
+                ind[nbrs]--;
+                if(ind[nbrs]==0)
+                    qq.add(nbrs);
+            }
+        }
+
+        return c== map.size()?true:false;
+
     }
 }
