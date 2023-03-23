@@ -9,12 +9,10 @@ public class Topological_Sort {
         for(int i=1;i<=v;i++)
             map.put(i,new HashMap<>());
     }
-
     public void addEdge ( int v1, int v2, int cost)
     {
         map.get(v1).put(v2,cost);
     }
-
     public int[] indegree(){
         int[] in=new int[map.size()+1];
         for(int key:map.keySet())
@@ -73,7 +71,7 @@ public class Topological_Sort {
             }
         }
 
-        return c== map.size()?true:false;
+        return c== map.size()?false:true;
 
     }
 }
