@@ -8,8 +8,6 @@ public class Fibo {
         System.out.println(fib(n,dp));
         long b=(long)System.currentTimeMillis();
         System.out.println(b-a);
-        for(long k: dp)
-            System.out.print(a+" ");
     }
     public static long fib(int n,long[] dp)
     {
@@ -18,9 +16,9 @@ public class Fibo {
             return n;
         }
         if(dp[n]!=0)
-            return dp[n]; // Dp agayi Dp
+            return dp[n];
         long f1=fib(n-1,dp);
         long f2=fib(n-2,dp);
-        return dp[n]=f1+f2; // Oo modifile kraya huya hai
+        return dp[n]=f1+f2;
     }
 }
