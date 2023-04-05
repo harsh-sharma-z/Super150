@@ -14,7 +14,10 @@ public class Fibo {
         b=(long)System.currentTimeMillis();
         System.out.println(b-a);
     }
-    public static long fibTD(int n,long[] dp)
+
+    //oye DP agayi DP
+    //modifive kraya hua hai :)
+    public static long fibTD(int n,long[] dp) //slower
     {
         if(n==0 || n==1)
         {
@@ -26,7 +29,7 @@ public class Fibo {
         long f2=fibTD(n-2,dp);
         return dp[n]=f1+f2;
     }
-    public static long fibBU(int n)
+    public static long fibBU(int n) //faster
     {
         long dp[]=new long[n+1];
 
