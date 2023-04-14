@@ -12,6 +12,7 @@ class DisjointSet{
         {
             rank.add(0);
             parent.add(i); // sab apne parent
+            size.add(1);//sabka size 1
         }
     }
 
@@ -51,7 +52,7 @@ class DisjointSet{
         if (ult_v == ult_u) // agar dono ke papa same hai to kuch nhi karne ka
             return;
 
-        if(size.get(ult_u)<size.get(ult_v))
+        if(size.get(ult_u)<size.get(ult_v)) //jo chhota hai usko bade mein add kardo
         {
             parent.set(ult_u,ult_v);
             size.set(ult_v,size.get(ult_v)+size.get(ult_u));
