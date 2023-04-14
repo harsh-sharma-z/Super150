@@ -3,6 +3,9 @@ import java.util.*;
 class DisjointSet{
     List<Integer> parent=new ArrayList<>();
     List<Integer> rank=new ArrayList<>();
+
+    List<Integer> size=new ArrayList<>();
+
     public DisjointSet(int n)
     {
         for(int i=0;i<=n;i++)
@@ -39,6 +42,23 @@ class DisjointSet{
             parent.set(ult_u,ult_v);
             int rankU=rank.get(ult_u);
             rank.set(ult_u,rankU+1);
+        }
+    }
+
+    public void unionBySize(int u , int v) {
+        int ult_u = findPar(u);
+        int ult_v = findPar(v);
+        if (ult_v == ult_u) // agar dono ke papa same hai to kuch nhi karne ka
+            return;
+
+        if(size.get(ult_u)<size.get(ult_v))
+        {
+            parent.set(ult_u,ult_v);
+            size.set(ult_v,size.get(ult_v)+size.get(ult_u));
+        }
+        else {
+            parent.set(ult_v,ult_u);
+            size.set(ult_u,size.get(ult_u)+size.get(ult_v));
         }
     }
 }
