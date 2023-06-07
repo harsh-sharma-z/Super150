@@ -3,21 +3,27 @@ class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        int m=sc.nextInt();
-        int[] boys=new int[n];
-        int[] girls=new int[m];
-        System.out.println(minDiff(boys,girls,0,0));
-
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        int z=sc.nextInt();
+        System.out.println(minCost(x,y,z,n));
     }
-    private static int minDiff(int[] boys, int[] girls, int i,int j)
+    private static long minCost(int x,int y, int z, int n)
     {
-        if(i==boys.length)
-            return 0;
-        if(j==girls.length)
-            return 10000000;
-        int pair=Math.abs(boys[i]-girls[j])+minDiff(boys,girls,i+1,j+1);
-        int noPair=minDiff(boys,girls,i,j+1);
-        return Math.min(pair,noPair);
+        long dp[]=new long[n+1];
+        for(int i=2;i<dp.length;i++)
+        {
+            if(i%2==0)
+            {
+                dp[i]=Math.min(dp[i/2]+x,dp[i-1]+y);
+            }
+            else
+            {
+                dp[i]=Math.min(dp[(i+1)/2]+x+z,dp[i-1]+y);
+            }
+
+        }
+        return dp[n];
     }
 }
 
