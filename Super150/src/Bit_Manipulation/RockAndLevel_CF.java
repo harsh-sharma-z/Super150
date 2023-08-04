@@ -2,7 +2,6 @@ package Bit_Manipulation;
 
 // Link: https://codeforces.com/problemset/problem/1420/B
 
-
 import java.util.*;
 
 public class RockAndLevel_CF {
