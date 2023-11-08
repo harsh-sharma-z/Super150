@@ -1,5 +1,5 @@
-package Computer_Vision;
-import java.util.*;
+package Soft_Computing;
+
 public class adalineAndOr {
     public static void main(String[] args) {
         int[][] input = {

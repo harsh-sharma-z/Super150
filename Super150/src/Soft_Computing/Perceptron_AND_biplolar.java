@@ -1,9 +1,8 @@
-package Computer_Vision;
+package Soft_Computing;
 import java.util.Arrays;
 
+public class Perceptron_AND_biplolar {
 
-
-public class Linearly_Separablle_Perceptron {
     static class Perceptron {
         private double[] weights;
         private double learningRate;
@@ -25,7 +24,7 @@ public class Linearly_Separablle_Perceptron {
                 sum += inputs[i] * weights[i + 1];
             }
 
-            return (sum > 0) ? 1 : 0;
+            return (sum > 0) ? 1 : -1;
         }
 
         public void train(int[][] trainingData, int[] labels) {
@@ -59,12 +58,12 @@ public class Linearly_Separablle_Perceptron {
         int maxEpochs = 1000;
 
         int[][] trainingData = {
-                {0, 0},
-                {0, 1},
-                {1, 0},
+                {-1, -1},
+                {-1, 1},
+                {1, -1},
                 {1, 1}
         };
-        int[] labels = {0, 0, 0, 1};
+        int[] labels = {-1, -1, -1, 1};
 
         Perceptron perceptron = new Perceptron(inputSize, learningRate, maxEpochs);
         perceptron.train(trainingData, labels);
